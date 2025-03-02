@@ -1,17 +1,4 @@
-.supplier-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: .5rem;
-    gap: .5rem;
-}
-
-.supplier-card-img{
+.supplier-card-img {
     width: 85%;
     height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-primary);
-    border-radius: .5rem;
 }

@@ -5,6 +5,7 @@ import { createClient } from '@/lib/db/client'
 import { supplyListMatcher } from '@/lib/db/utils/supplyListConstants'
 import { JSX } from 'react'
 import Nav from '@/components/Nav'
+import ProfileContainer from '@/components/ProfileContainer'
 
 export default async function Page() {
   //TODO move to api?
@@ -43,15 +44,22 @@ export default async function Page() {
 
   return (
     <>
-    <Nav/> 
+      <Nav/> 
       <SupplierContainer data={x}/>  
-      {data?.map((user) => (
+      { 
+      <ProfileContainer data={ data ? data : [] }/>
+      }
+      
+      {/* {data?.map((user) => {
+      
+      return (
+      
         <div key={user.id}>
           <h1>{user.name}</h1>
           <ul>{displaySupplyList(user.supplyList)}</ul>
           <img src={user.imageUrl} alt={`${user.name}'s profile`} />
         </div>
-      ))}
+      )})} */}
     </>
   )
 }

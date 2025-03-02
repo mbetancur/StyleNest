@@ -1,0 +1,6 @@
+.profile-list > * {
+    width: 50%;
+    max-width: 250px;
+    min-width: 200px;
+    height: 15rem;
+}
