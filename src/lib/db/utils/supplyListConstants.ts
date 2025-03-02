@@ -1,6 +1,6 @@
 export const supplyConstants: { [key: string]: string } = {
     barbershop: "Barberia",
-    manicure: "Manicure",
+    manicure: "Manicura",
 };
 
 export const supplyListMatcher = (supplyList: string): string => {  
