@@ -1,1 +1,9 @@
 @import './resetStyle.css'; 
+
+body{
+    min-width: 360px;
+}
+body > *{
+    min-width: 360px;
+    
+}
