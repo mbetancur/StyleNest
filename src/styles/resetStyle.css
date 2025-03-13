@@ -8,58 +8,74 @@
 
 /* Color de fondo del scrollbar */
 ::-webkit-scrollbar-track {
-  background: var(--color-background);
+  background: var(--color-text);
 }
 
 /* Color de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: var(--color-secondary);
   border-radius: 5px;
 }
 
 /* Cambio de color al pasar el mouse */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary);
+  background: var(--color-primary);
 }
 
 /* Here we define custom properties */
 :root {
-  /* Here we define color*/
-  --color-primary:#ff6f61;
+  /* Here we define color */
+  /* --color-primary:#ff6f61;
   --color-secondary:#6b5b95;
   --color-accent:#88b04b;
   --color-text:#212121;
-  --color-background:#f7f7f7;
+  --color-background:#f7f7f7; */
 
+  --color-primary: #E91E63;    /* Vibrant pink for a touch of energy and modernity */
+  --color-secondary: #673AB7;  /* Deep purple that brings sophistication and balance */
+  --color-accent: #00BCD4;     /* Aquamarine blue to highlight key elements */
+  --color-text: #424242;       /* Dark gray to ease reading without being too contrasting */
+  --color-background: #FAFAFA; /* Very light and neutral background to highlight other colors */
 
-
-
-  /* Here we define typography*/
+  /* Here we define typography */
   --typography-primary: Helvetica,arial,sans-serif;
   --typography-secondary: Verdana;
 }
 
-/* Here we define dark mode*/
+/* Here we define dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary:#ff8a7a ;
+    /* --color-primary:#ff8a7a ;
     --color-secondary:#8478b3 ;
     --color-accent:#9ccb64 ;
     --color-text:#181818 ;
-    --color-background:#e0e0e0 ;
+    --color-background:#e0e0e0 ; */
+    
+    --color-primary: #FF4081;    /* Vibrant pink, slightly lighter to stand out on a dark background */
+    --color-secondary: #7C4DFF;  /* Intense purple that maintains sophistication and contrast */
+    --color-accent: #18FFFF;     /* Bright cyan for accents and calls-to-action */
+    --color-text: #E0E0E0;       /* Very light gray to ensure good legibility on a dark background */
+    --color-background: #212121; /* Dark background that provides depth and elegance */
   }
 }
+
 /* Optional */
 /* Here we define Contrast High */
 @media (prefers-contrast: high) {
   :root {
-    --color-primary:#ff2d00 ;
+    /* --color-primary:#ff2d00 ;
     --color-secondary:#3d348b ;
     --color-accent:#aad400 ;
     --color-text:#ffffff;
-    --color-background:#000000;
+    --color-background:#000000; */
+    --color-primary: #FF4081;    /* Vibrant and saturated pink for main elements */
+    --color-secondary: #7C4DFF;  /* Intense purple that reinforces contrast and sophistication */
+    --color-accent: #18FFFF;     /* Bright cyan that stands out for calls-to-action */
+    --color-text: #FFFFFF;       /* White text for maximum legibility on a dark background */
+    --color-background: #000000; /* Pure black background that increases overall contrast */
   }
 }
+
 /* Disable the animations in case the user has configured the mode without animation.  */
 @media (prefers-reduced-motion: reduce) {
   * {

@@ -1,5 +1,7 @@
 .profile{
-    width: 100vw;
+    margin: 0 auto;
+    max-width: 44rem;
+    width: 100%;
     min-height: 100vh; 
     padding-bottom: 6rem; 
     color: var(--color-text);
@@ -7,7 +9,6 @@
 }
 .profile-appointment{
     margin: 1rem;
-    cursor: pointer;
     position: fixed;
     bottom: 0rem;
     right: 1rem;
@@ -15,12 +16,23 @@
     width: 19.5rem;
     height: 4rem;
 }
+.profile-appointment,
+.profile-appointment_link {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.profile-appointment_link:hover{
+    transform: scale(1.1);
+    background-color: var(--color-accent);
+    transition: transform 0.3s ease-in-out;
+}
+
 .profile-appointment_link{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction:row;
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
     border-radius: 1.2rem;
 }
 .profile-appointment_text{
@@ -59,7 +71,7 @@
     left: 0;
     width: 100%;
     height: 12rem;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     filter: brightness(1.5);
 }
 .profile-header{   
@@ -72,7 +84,7 @@
     padding: 1rem;
     position: relative;
 }
-.profile-header_back{    
+.profile-header_back{  
     display: flex;
     flex-direction: row;
     gap: .5rem;
@@ -92,7 +104,12 @@
     align-items: start;
     justify-content: end;
     position: relative;
-
+    font-size: .8rem;
+}
+.profile-header_name{
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 .profile-header_img{
     border-radius: 1rem;
@@ -165,7 +182,7 @@
 }
 .selected{
     background-color: var(--color-secondary);
-    color: var(--color-background);
+    color: var(--color-text);
     border-radius: .5rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
@@ -193,6 +210,7 @@
     
 }
 .item{
+    cursor: pointer;
     min-width: content;
     padding: .3rem;
     text-align: center;
@@ -209,6 +227,7 @@
     margin: .5rem 1rem;
     font-size: 18px;
     text-align: left;
+    color: var(--color-background);
 }
 
 .price-table th, .price-table td {
@@ -222,12 +241,9 @@
 }
 
 .price-table tr {
-    background-color: #f2f2f2;
+    background-color: var(--color-text);
 }
 
-.price-table tr:hover {
-    background-color: var(--color-accent);
-}
 
 .profile-works{
     min-width: 20.5rem;

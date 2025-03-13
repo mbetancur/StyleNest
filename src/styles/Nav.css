@@ -1,5 +1,5 @@
 .nav{
-    min-width: 23.5rem;
+    min-width: 21.5rem;
     display: flex;
     flex-direction: column;
     background-color: var(--color-secondary);

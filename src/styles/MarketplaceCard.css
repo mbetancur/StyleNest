@@ -1,0 +1,64 @@
+.marketplace-card {
+    width: 100%; 
+    max-width: 41rem;
+    min-width: 20.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    /* box-shadow: 0px 0px 103px -40px var(--color-accent); */ /* Shadow if we want it*/
+    border: 1px solid var(--color-secondary);
+    border-radius: .4rem;
+    flex-grow: 1; 
+    transition: transform .6s;
+    cursor: pointer;
+}
+.marketplace-card:hover{
+    box-shadow: 0px 0px 50px -35px var(--color-accent); /* Shadow if we want it */
+    border-color: var(--color-accent);
+    transform: scale(1.04);
+    transition: transform .8s;
+}
+.marketplace-card-img {
+    width: 10rem;
+    height: 10rem;
+}
+.marketplace-card-img img{
+    height: 10rem;
+}
+.marketplace-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: start;
+    gap: .5rem;
+    color:var(--color-text);
+}
+.marketplace-card-name{
+    font-size: 1.4rem;
+}
+.marketplace-card-services{
+    font-size: .8rem;
+    opacity: .5;
+}
+.marketplace-card-price{
+    font-size: 1.4rem;
+}
+
+@media (min-width: 45rem) {
+    .marketplace-card {
+        width: auto;
+        max-width: 20rem; 
+    }
+    .marketplace-card:hover{
+        transform: scale(1.08);
+        
+    }
+
+}
